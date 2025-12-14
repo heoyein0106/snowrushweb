@@ -1,0 +1,657 @@
+/* style.css */
+/* 기본 설정 */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* 좀 더 부드러운 폰트 */
+    margin: 0;
+    background-color: #030812;
+    /* 기타 컬러 (원래 배경) */
+    color: #EAEDF8;
+    /* 기타 컬러 */
+    font-size: 16px;
+    /* 기본 폰트 크기 조정 */
+    line-height: 1.7;
+    /* 줄 간격 넓혀 가독성 향상 */
+    letter-spacing: 0.02em;
+    /* 글자 간격 조정 */
+}
+
+a {
+    color: #0033FF;
+    /* 메인 컬러 */
+    text-decoration: none;
+    transition: color 0.3s ease;
+    /* 호버 시 색상 변경 부드럽게 */
+}
+
+a:hover {
+    color: #977DFF;
+    /* 서브 컬러 */
+    text-decoration: underline;
+}
+
+/* 상단 내비게이션 바 */
+.navbar {
+    background-color: rgba(0, 3, 61, 0.8);
+    /* 메인 컬러 #00033D에 투명도 적용 */
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    /* 그림자 진하게 */
+}
+
+.navbar .logo {
+    display: flex;
+    /* 로고와 태그라인 정렬을 위해 flex 사용 */
+    align-items: center;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.navbar .logo:hover {
+    opacity: 0.8;
+}
+
+.navbar .logo img {
+    height: 40px;
+    /* 로고 이미지 크기 조정 */
+    margin-right: 0.8rem;
+}
+
+.navbar .logo span {
+    /* 텍스트 로고 부분 스타일 */
+    font-weight: bold;
+    font-size: 1.6rem;
+    /* 로고 텍스트 크기 조정 */
+    color: #D8F800;
+    /* 포인트 컬러 */
+    letter-spacing: 0.05em;
+    transition: color 0.3s ease;
+}
+
+.navbar .logo:hover span {
+    color: #EAEDF8;
+    /* 호버 시 텍스트 색상 변경 */
+}
+
+.navbar .tagline {
+    font-size: 0.85rem;
+    /* 태그라인 크기 조정 */
+    color: #977DFF;
+    /* 서브 컬러 */
+    margin-left: 1rem;
+    letter-spacing: 0.03em;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar .nav-links li {
+    margin-left: 1.8rem;
+    /* 메뉴 간격 조정 */
+}
+
+.navbar .nav-links a {
+    color: #EAEDF8;
+    /* 기타 컬러 */
+    font-weight: bold;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    border-bottom: 2px solid transparent;
+    /* 기본 투명 테두리 */
+}
+
+.navbar .nav-links a:hover {
+    color: #D8F800;
+    /* 포인트 컬러 */
+    text-decoration: none;
+    border-bottom: 2px solid #D8F800;
+    /* 호버 시 테두리 색상 변경 */
+}
+
+.navbar .auth-buttons {
+    display: flex;
+    gap: 0.8rem;
+    /* 버튼 간격 조정 */
+}
+
+.navbar .auth-buttons .btn {
+    padding: 0.7rem 1.3rem;
+    /* 버튼 패딩 조정 */
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+    border: 2px solid transparent;
+    /* 기본 투명 테두리 */
+    font-size: 0.9rem;
+    /* 버튼 폰트 크기 조정 */
+}
+
+.navbar .auth-buttons .btn-primary {
+    background-color: #0033FF;
+    /* 메인 컬러 */
+    color: #EAEDF8;
+    /* 기타 컬러 */
+}
+
+.navbar .auth-buttons .btn-primary:hover {
+    background-color: #0022CC;
+    border-color: #0022CC;
+    color: #D8F800;
+    /* 호버 시 글자색 변경 */
+}
+
+.navbar .auth-buttons .btn-secondary {
+    background-color: rgba(216, 248, 0, 0.2);
+    /* 포인트 컬러 투명도 적용 */
+    color: #D8F800;
+    /* 포인트 컬러 */
+    border: 2px solid #D8F800;
+    /* 테두리 두께 및 색상 조정 */
+}
+
+.navbar .auth-buttons .btn-secondary:hover {
+    background-color: rgba(216, 248, 0, 0.4);
+    border-color: #D8F800;
+    color: #EAEDF8;
+    /* 호버 시 글자색 변경 */
+}
+
+/* 푸터 */
+.footer {
+    background-color: #00033D;
+    /* 메인 컬러 */
+    padding: 3.5rem 2rem;
+    /* 푸터 패딩 조정 */
+    color: #EAEDF8;
+    /* 기타 컬러 */
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2.5rem;
+    /* 푸터 컬럼 간격 조정 */
+    margin-top: 5rem;
+    /* 상단 여백 조정 */
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.3);
+    /* 그림자 추가 */
+}
+
+.footer .col {
+    flex: 1;
+    min-width: 220px;
+    /* 최소 너비 조정 */
+    text-align: left;
+}
+
+.footer .col h4 {
+    color: #D8F800;
+    /* 포인트 컬러 */
+    margin-bottom: 1.2rem;
+    /* 제목 하단 여백 조정 */
+    font-size: 1.15rem;
+    /* 제목 폰트 크기 조정 */
+    letter-spacing: 0.04em;
+}
+
+.footer .col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer .col ul li {
+    margin-bottom: 0.6rem;
+    /* 목록 아이템 간격 조정 */
+}
+
+.footer .col ul a {
+    color: #EAEDF8;
+    /* 기타 컬러 */
+    font-size: 0.95rem;
+    /* 링크 폰트 크기 조정 */
+    transition: color 0.3s ease;
+}
+
+.footer .col ul a:hover {
+    color: #977DFF;
+    /* 서브 컬러 */
+    text-decoration: underline;
+}
+
+.footer .social-icons a {
+    font-size: 1.6rem;
+    /* 소셜 아이콘 크기 조정 */
+    margin-right: 1.2rem;
+    color: #EAEDF8;
+    transition: color 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+    color: #D8F800;
+    /* 호버 시 색상 변경 */
+}
+
+.footer .newsletter input[type="email"] {
+    padding: 0.8rem;
+    /* 인풋 패딩 조정 */
+    border: 1px solid rgba(234, 237, 248, 0.3);
+    /* 테두리 추가 */
+    border-radius: 5px;
+    margin-right: 0.6rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #EAEDF8;
+    width: calc(100% - 100px);
+    /* 너비 조정 */
+    max-width: 200px;
+}
+
+.footer .newsletter input[type="email"]::placeholder {
+    color: rgba(234, 237, 248, 0.6);
+}
+
+.footer .newsletter button {
+    padding: 0.8rem 1.2rem;
+    /* 버튼 패딩 조정 */
+    background-color: #0033FF;
+    /* 메인 컬러 */
+    color: #EAEDF8;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.footer .newsletter button:hover {
+    background-color: #0022CC;
+    color: #D8F800;
+    /* 호버 시 글자색 변경 */
+}
+
+.footer .copyright {
+    width: 100%;
+    margin-top: 2.5rem;
+    /* 상단 여백 조정 */
+    font-size: 0.85rem;
+    color: rgba(234, 237, 248, 0.6);
+    letter-spacing: 0.01em;
+}
+
+/* 공통 콘텐츠 박스 및 버튼 스타일 */
+.content-section {
+    padding: 4.5rem 2.5rem;
+    max-width: 1100px;
+    margin: 3rem auto;
+    background-color: rgba(0, 3, 61, 0.2);
+    /* 배경색 더 밝게 */
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(0, 51, 255, 0.2);
+}
+
+.content-section h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+    color: #D8F800;
+    letter-spacing: 0.05em;
+    text-align: center;
+}
+
+.content-section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1.2rem;
+    color: #EAEDF8;
+    letter-spacing: 0.04em;
+    border-bottom: 1px solid rgba(216, 248, 0, 0.3);
+    padding-bottom: 0.5rem;
+    margin-top: 3rem;
+}
+
+.content-section h3 {
+    font-size: 1.6rem;
+    margin-bottom: 0.8rem;
+    color: #977DFF;
+    letter-spacing: 0.03em;
+}
+
+.content-section p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+.content-section ul li {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 0.5rem;
+}
+
+.content-box {
+    background-color: rgba(0, 51, 255, 0.1);
+    /* 메인 컬러 투명도 조정 */
+    padding: 1.8rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+    border: 1px solid transparent;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.content-box:hover {
+    border-color: #D8F800;
+    /* 호버 시 테두리 색상 변경 */
+    background-color: rgba(0, 51, 255, 0.2);
+}
+
+.btn-transparent {
+    background-color: rgba(216, 248, 0, 0.2);
+    /* 포인트 컬러 투명도 적용 */
+    color: #D8F800;
+    padding: 0.9rem 1.8rem;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid #D8F800;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+    font-size: 1rem;
+}
+
+.btn-transparent:hover {
+    background-color: rgba(216, 248, 0, 0.4);
+    border-color: #EAEDF8;
+    color: #EAEDF8;
+    transform: scale(1); /* <<<<<<< 이 부분을 추가하거나 수정해주세요. 크기 변화 없앰 */
+}
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #EAEDF8;
+    overflow: hidden;
+    background-attachment: fixed;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    /* 텍스트 가독성을 위한 오버레이 */
+    z-index: 0;
+}
+
+.hero-section h1 {
+    font-size: 3.8rem;
+    margin-bottom: 1.2rem;
+    z-index: 1;
+    color: #D8F800;
+    /* 포인트 컬러 */
+    letter-spacing: 0.08em;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.hero-section p {
+    font-size: 1.6rem;
+    margin-bottom: 2.5rem;
+    z-index: 1;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6);
+}
+
+.hero-section .hero-buttons .btn {
+    margin: 0 0.8rem;
+    z-index: 1;
+    position: relative;
+}
+
+/* 태그 스타일 */
+.tag {
+    background-color: rgba(216, 248, 0, 0.15);
+    /* 포인트 컬러 투명도 적용 */
+    color: #D8F800;
+    padding: 0.35rem 0.9rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    border: 1px solid rgba(216, 248, 0, 0.6);
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.tag:hover {
+    background-color: rgba(216, 248, 0, 0.3);
+    border-color: #EAEDF8;
+    color: #EAEDF8;
+}
+
+/* FAQ 디테일 스타일 */
+details {
+    background-color: rgba(0, 51, 255, 0.1);
+    border-radius: 10px;
+    margin-bottom: 1.2rem;
+    padding: 1.2rem 1.8rem;
+    border: 1px solid transparent;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+details:hover {
+    border-color: #977DFF;
+    /* 호버 시 테두리 색상 변경 */
+    background-color: rgba(0, 51, 255, 0.25);
+}
+
+summary {
+    cursor: pointer;
+    font-weight: bold;
+    color: #977DFF;
+    outline: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+summary:hover {
+    color: #D8F800;
+}
+
+details p {
+    margin-top: 1rem;
+    padding-left: 1.2rem;
+    border-left: 3px solid #D8F800;
+    font-size: 0.95rem;
+}
+
+/* 스키왁싱 가이드 체크리스트 스타일 */
+.management-checklist ul {
+    list-style: none;
+    padding: 0;
+}
+
+.management-checklist ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.8rem;
+    font-size: 1.05rem;
+}
+
+.management-checklist ul li input[type="checkbox"] {
+    /* 기본 체크박스 숨기기 */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 2px solid #D8F800;
+    /* 체크박스 테두리 (포인트 컬러) */
+    border-radius: 50%;
+    /* 원형 */
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    margin-right: 0.8rem;
+    /* 아이콘 대신 체크박스와 레이블 간격 조정 */
+    position: relative;
+    top: 2px;
+    /* 텍스트와 정렬을 위해 약간 조정 */
+}
+
+.management-checklist ul li input[type="checkbox"]:checked {
+    background-color: #0033FF;
+    /* 체크 시 메인 컬러 */
+    border-color: #0033FF;
+}
+
+.management-checklist ul li input[type="checkbox"]:checked::after {
+    /* 체크 표시 */
+    content: '\2713';
+    /* 유니코드 체크마크 */
+    color: #EAEDF8;
+    /* 기타 컬러 */
+    font-size: 14px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+}
+
+.management-checklist .tip-box {
+    background-color: rgba(216, 248, 0, 0.1);
+    /* 포인트 컬러 투명도 적용 */
+    border-left: 5px solid #D8F800;
+    padding: 1rem 1.5rem;
+    margin-top: 1.5rem;
+    border-radius: 0 8px 8px 0;
+    display: flex;
+    align-items: center;
+}
+
+.management-checklist .tip-box i {
+    color: #D8F800;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+/* 미디어 쿼리 (반응형 디자인) */
+@media (max-width: 768px) {
+    body {
+        font-size: 15px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+
+    .navbar .tagline {
+        margin-left: 0;
+        margin-top: 0.5rem;
+    }
+
+    .navbar .logo {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar .logo img {
+        margin-bottom: 0.5rem;
+        margin-right: 0;
+    }
+
+    .navbar .nav-links {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 1rem;
+        align-items: flex-start;
+    }
+
+    .navbar .nav-links li {
+        margin: 0.5rem 0;
+        width: 100%;
+    }
+
+    .navbar .auth-buttons {
+        margin-top: 1rem;
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .navbar .auth-buttons .btn {
+        flex: 1;
+        text-align: center;
+        padding: 0.8rem 1rem;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 2.5rem 1rem;
+    }
+
+    .footer .col {
+        min-width: 100%;
+        text-align: center;
+    }
+
+    .hero-section {
+        height: 55vh;
+    }
+
+    .hero-section h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero-section p {
+        font-size: 1.3rem;
+    }
+
+    .content-section {
+        padding: 3rem 1.5rem;
+        margin: 1.5rem auto;
+    }
+
+    .content-section h1 {
+        font-size: 2.2rem;
+    }
+
+    .content-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .content-section h3 {
+        font-size: 1.4rem;
+    }
+
+    .content-section p,
+    .content-section ul li,
+    .btn-transparent {
+        font-size: 0.95rem;
+    }
+}
+/* 페이지네이션 활성 버튼 스타일 (새로 추가) */
+.pagination-btn-active 
+{
+    background-color: #D8F800 !important; /* <<<<<<< 꽉 찬 노란색 */
+    color: #030812 !important; /* <<<<<<< 글자색을 어둡게 */
+    border-color: #D8F800 !important; /* <<<<<<< 테두리도 꽉 찬 노란색 */
+    transform: scale(1) !important; /* <<<<<<< 크기 변화 없앰 (모든 !important는 다른 스타일과의 충돌 방지용) */
+}

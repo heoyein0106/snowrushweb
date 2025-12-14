@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNOW RUSH - 장비 관리</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="navbar-left">
+            <a href="index.html" class="logo">
+                <img src="images/ski_logo.png" alt="SNOW RUSH Logo">
+                <span>SNOW RUSH</span>
+            </a>
+            <span class="tagline">흰 눈 위의 질주, 지금 시작하세요!</span>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="beginner_guide.html">입문 가이드</a></li>
+                <li><a href="equipment_guide.html">장비 선택</a></li>
+                <li><a href="basic_skills.html">기초 기술</a></li>
+                <li><a href="safety_manners.html">안전 & 매너</a></li>
+                <li><a href="ski_resort_info.html">스키장 가이드</a></li>
+                <li><a href="equipment_management.html">장비 관리</a></li>
+                <li><a href="qa_tips.html">Q&A 혹은 입문자 팁</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <a href="signup.html" class="btn btn-secondary">회원가입</a>
+            <a href="login.html" class="btn btn-primary">로그인</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section" style="background-image: url('images/equipment_management_hero.jpg');">
+            <h1>장비 관리 A to Z</h1>
+            <p>소중한 내 장비, 처음처럼 관리하는 비법을 알려드려요.</p>
+        </section>
+
+        <section class="content-section">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-bottom: 3rem;">
+                <div class="content-box" style="text-align: center;">
+                    <img src="images/management_ski_basic.jpg" alt="스키 왁싱 기본" style="width: 100%; height: 150px; object-fit: cover; border-radius: 5px; margin-bottom: 1rem;">
+                    <h3>스키 왁싱 기본</h3>
+                    <p>언제, 어떻게 해야 할까요?</p>
+                </div>
+                <div class="content-box" style="text-align: center;">
+                    <img src="images/management_season_off.jpg" alt="시즌 오프 보관법" style="width: 100%; height: 150px; object-fit: cover; border-radius: 5px; margin-bottom: 1rem;">
+                    <h3>시즌 오프 보관법</h3>
+                    <p>다음 시즌을 위한 완벽한 준비</p>
+                </div>
+                <div class="content-box" style="text-align: center;">
+                    <img src="images/management_boots_binding.jpg" alt="부츠 & 바인딩 관리" style="width: 100%; height: 150px; object-fit: cover; border-radius: 5px; margin-bottom: 1rem;">
+                    <h3>부츠 & 바인딩 관리</h3>
+                    <p>안전과 직결되는 핵심 관리법</p>
+                </div>
+                <div class="content-box" style="text-align: center;">
+                    <img src="images/management_apparel.png" alt="스키복 및 액세서리" style="width: 100%; height: 150px; object-fit: cover; border-radius: 5px; margin-bottom: 1rem;">
+                    <h3>스키복 및 액세서리</h3>
+                    <p>고글, 장갑, 헬멧 관리 팁</p>
+                </div>
+            </div>
+
+            <div style="display: flex; flex-wrap: wrap; gap: 2rem;">
+                <div style="flex: 1; min-width: 300px;">
+                    <h2 style="margin-top: 0;">스키 왁싱 기본 가이드</h2>
+                    <div class="content-box management-checklist">
+                        <h3>준비물</h3>
+                        <ul>
+                            <li><input type="checkbox" id="wax_ski_wax"><label for="wax_ski_wax"> 스키 왁스</label></li>
+                            <li><input type="checkbox" id="wax_iron"><label for="wax_iron"> 전용 다리미</label></li>
+                            <li><input type="checkbox" id="wax_scraper"><label for="wax_scraper"> 스크래퍼</label></li>
+                            <li><input type="checkbox" id="wax_brush"><label for="wax_brush"> 브러쉬 (나일론, 구리 등)</label></li>
+                        </ul>
+                        <div class="tip-box">
+                            <i class="far fa-lightbulb"></i>
+                            <p>전문가의 팁<br>다리미 온도는 왁스 종류에 맞춰 조절하세요! 너무 높으면 베이스가 손상될 수 있습니다.</p>
+                        </div>
+                    </div>
+                </div>
+                <div style="flex: 1; min-width: 300px;">
+                    <h2 style="margin-top: 0;">단계별 가이드</h2>
+                    <div class="content-box">
+                        <ol style="list-style-type: none; padding: 0;">
+                            <li style="display: flex; align-items: flex-start; margin-bottom: 1rem; ">
+                                <div style="width: 25px; height: 25px; background-color: #0033FF; color: #EAEDF8; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-weight: bold; font-size: 0.9rem; margin-right: 1rem; flex-shrink: 0;">1</div>
+                                <div style="flex-grow: 1; padding-bottom: 1rem; border-bottom: 1px solid rgba(255, 255, 255, 0.3);"> <!-- 여기에 선 적용 -->
+                                    <h3>베이스 클리닝</h3>
+                                    <p>전용 리무버와 천을 이용해 스키 베이스의 묵은 왁스와 오염 물질을 깨끗하게 닦아냅니다.</p>
+                                </div>
+                            </li>
+                            <li style="display: flex; align-items: flex-start; margin-bottom: 1rem;">
+                                <div style="width: 25px; height: 25px; background-color: #0033FF; color: #EAEDF8; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-weight: bold; font-size: 0.9rem; margin-right: 1rem; flex-shrink: 0;">2</div>
+                                <div style="flex-grow: 1; padding-bottom: 1rem; border-bottom: 1px solid rgba(255, 255, 255, 0.3);"> <!-- 여기에 선 적용 -->
+                                    <h3>왁스 녹여 바르기</h3>
+                                    <p>예열된 다리미에 왁스를 대고 녹여서 베이스 전체에 골고루 떨어뜨려 줍니다.</p>
+                                </div>
+                            </li>
+                            <li style="display: flex; align-items: flex-start; margin-bottom: 1rem;">
+                                <div style="width: 25px; height: 25px; background-color: #0033FF; color: #EAEDF8; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-weight: bold; font-size: 0.9rem; margin-right: 1rem; flex-shrink: 0;">3</div>
+                                <div style="flex-grow: 1; padding-bottom: 1rem; border-bottom: 1px solid rgba(255, 255, 255, 0.3);"> <!-- 여기에 선 적용 -->
+                                    <h3>다림질하기</h3>
+                                    <p>다리미로 팁에서 테일 방향으로 천천히 움직이며 왁스가 베이스에 잘 스며들도록 합니다.</p>
+                                </div>
+                            </li>
+                            <li style="display: flex; align-items: flex-start;">
+                                <div style="width: 25px; height: 25px; background-color: #0033FF; color: #EAEDF8; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-weight: bold; font-size: 0.9rem; margin-right: 1rem; flex-shrink: 0;">4</div>
+                                <div style="flex-grow: 1;"> <!-- 마지막 항목은 선 없음 -->
+                                    <h3>스크래핑 & 브러싱</h3>
+                                    <p>왁스가 식으면 스크래퍼로 긁어내고, 브러쉬로 베이스의 구조를 살려 마무리합니다.</p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section" style="text-align: center; background-color: rgba(0, 51, 255, 0.2);">
+            <h2>궁금증이 해결되지 않았다면? 무엇이든 물어보세요!</h2>
+            <p style="max-width: 800px; margin: 0.5rem auto 2rem; font-size: 1.1rem;">
+                장비 관리에 대한 더 많은 질문과 답변, 그리고 스키 초보자를 위한 유용한 팁들을 확인해보세요.
+            </p>
+            <a href="qa_tips.html" class="btn btn-transparent">Q&A 및 입문자 팁 보러 가기 <i class="fas fa-arrow-right" style="margin-left: 0.5rem;"></i></a>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="col">
+            <a href="index.html" class="logo">
+                <img src="images/ski_logo.png" alt="SNOW RUSH Logo" style="height: 30px; margin-bottom: 0.5rem;">
+                <span>SNOW RUSH</span>
+            </a>
+            <p>
+                스키 입문자와 초보자를 위한 최고의 가이드.<br>
+                흰 눈 위 질주, 지금 시작하세요! SNOW RUSH와 함께하세요.
+            </p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="col">
+            <h4>가이드 & 팁</h4>
+            <ul>
+                <li><a href="beginner_guide.html">입문 가이드</a></li>
+                <li><a href="equipment_guide.html">장비 선택</a></li>
+                <li><a href="basic_skills.html">기초 기술</a></li>
+                <li><a href="safety_manners.html">안전 & 매너</a></li>
+                <li><a href="ski_resort_info.html">스키장 가이드</a></li>
+                <li><a href="equipment_management.html">장비 관리</a></li>
+            </ul>
+        </div>
+        <div class="col">
+            <h4>유용한 정보</h4>
+            <ul>
+                <li><a href="#">고객지원</a></li>
+                <li><a href="#">자주 묻는 질문</a></li>
+                <li><a href="#">제휴 문의</a></li>
+                <li><a href="#">개인정보처리방침</a></li>
+            </ul>
+        </div>
+        <div class="col newsletter">
+            <h4>뉴스레터 구독</h4>
+            <p>최신 스키 정보와 팁을 받아보세요.</p>
+            <input type="email" placeholder="이메일 주소">
+            <button type="submit">구독</button>
+        </div>
+        <div class="copyright">
+            &copy; 2024 SNOW RUSH. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>
